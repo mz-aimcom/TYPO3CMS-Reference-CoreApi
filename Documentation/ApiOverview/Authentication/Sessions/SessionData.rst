@@ -22,6 +22,17 @@ You can use the following methods in
     Saves data to the session as a string.
 :php:`FrontendUserAuthentication::storeSessionData()`
     Writes session data so it is available in the next request.
+:php:`FrontendUserAuthentication::setAndSaveSessionData($key, $data)`
+    Saves data to the session and writes it. (Equals `setKey('ses', $key, $data)` followed by `storeSessionData()`.)
+
+Or also these methods in
+:php-short:`\TYPO3\CMS\Core\Authentication\AbstractUserAuthentication`:
+
+:php:`AbstractUserAuthentication::getSessionData($key)`
+    Returns the session data stored for key.
+:php:`AbstractUserAuthentication::setSessionData($key, $data)`
+    Set session data by key.
+
 
 ..  _session-data-example-multi-step:
 
